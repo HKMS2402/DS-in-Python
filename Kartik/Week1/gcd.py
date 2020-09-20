@@ -1,4 +1,5 @@
 #Naive Approach
+#Not Optimized Approach
 class GCD:
     def __init__(self):
         self.__gcd = 0
@@ -26,7 +27,16 @@ class GCD:
             if(n%i ==0) and (m%i ==0):
                 cf.append(i)
         return cf[-1]
-    
+
+    def naiveGCDv3(self,m,n):
+        num = min(m,n)
+        cf = []
+        for i in range(1,num+1):
+            if(n%i ==0) and (m%i ==0):
+                cf.append(i)
+        return cf[-1]
+
+        
 
 x = GCD()
 print(x.naiveGCDv2(14,63))
