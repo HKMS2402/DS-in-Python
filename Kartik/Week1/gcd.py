@@ -1,5 +1,5 @@
 #Naive Approach
-#Not Optimized
+#Not Optimized Approach
 class GCD:
     def __init__(self):
         self.__gcd = 0
