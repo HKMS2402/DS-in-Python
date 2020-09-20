@@ -1,5 +1,5 @@
 #Naive Approach
-class naiveGCD:
+class GCD:
     def __init__(self):
         self.__gcd = 0
 
@@ -10,7 +10,7 @@ class naiveGCD:
                 factors.append(i)
         return factors        
 
-    def gcd(self,m,n):
+    def naiveGCDv1(self,m,n):
         fm = self.factors(m)
         fn = self.factors(n)
         cf = []
@@ -19,5 +19,14 @@ class naiveGCD:
                 cf.append(i)
         return cf[-1]
 
-x = naiveGCD()
-print(x.gcd(14,63))
+    def naiveGCDv2(self,m,n):
+        num = max(m,n)
+        cf = []
+        for i in range(1,num+1):
+            if(n%i ==0) and (m%i ==0):
+                cf.append(i)
+        return cf[-1]
+    
+
+x = GCD()
+print(x.naiveGCDv2(14,63))
